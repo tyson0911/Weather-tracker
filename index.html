@@ -10,7 +10,13 @@
     <div id="weather-container">
         <h2>Weather Tracker</h2>
         <input type="text" id="city" placeholder="Enter city">
-        <button onclick="getWeather()">Search</button>
+
+        <div class="button-div">
+            <button id="search-button" onclick="getWeather()">Search</button>
+            <button id="unit-toggle" onclick="toggleUnit()">Switch to Fahrenheit</button>
+        </div>
+
+        <div id="loading" class="loader" style="display: none;"></div>
 
         <img id="weather-icon" alt="Weather Icon">
 
@@ -18,8 +24,15 @@
 
         <div id="weather-info"></div>
 
-        <div id="hourly-forecast"></div>
+        <div id="hourly-forecast">
+            <h3 id="hourly-heading">Hourly Forecast</h3>
+            <div class="hourly-items-container"></div>
+        </div>
+
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
+    
 </body>
 </html>

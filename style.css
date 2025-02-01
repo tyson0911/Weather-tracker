@@ -6,11 +6,14 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #weather-container {
-    background: rgb(39 14 14 / 30%);;
+    background: rgba(39, 14, 14, 0.3);
     max-width: 400px;
+    width: 100%;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -31,6 +34,20 @@ input {
     border-radius: 10px;
     border: 1px solid white;
     margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.button-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 button {
@@ -40,9 +57,9 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 20px;
-    width: 100px;
+    width: 150px;
     font-size: 15px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
@@ -52,26 +69,37 @@ button:hover {
 #temp-div p {
     font-size: 60px;
     margin-top: -30px;
+    color: white;
 }
 
 #weather-info {
     font-size: 20px;
+    color: white;
 }
 
 #weather-icon {
     width: 200px;
     height: 200px;
-    margin: 0 auto 10px; 
+    margin: 0 auto 10px;
     margin-bottom: 0;
     display: none;
 }
 
 #hourly-forecast {
     margin-top: 50px;
-    overflow-x: auto;
-    white-space: nowrap;
+    color: white;
+}
+
+#hourly-heading {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.hourly-items-container {
     display: flex;
-    justify-content: space-between;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
 .hourly-item {
@@ -80,7 +108,6 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 10px;
     color: white;
 }
 
@@ -90,7 +117,85 @@ button:hover {
     margin-bottom: 5px;
 }
 
-#hourly-heading {
-    color: #fff;
-    margin-top: 10px;
+.hourly-item span {
+    font-size: 14px;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #weather-container {
+        padding: 15px;
+    }
+
+    #temp-div p {
+        font-size: 50px;
+    }
+
+    #weather-info {
+        font-size: 18px;
+    }
+
+    #weather-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hourly-item {
+        width: 70px;
+    }
+
+    .hourly-item img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .hourly-item span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    #temp-div p {
+        font-size: 40px;
+    }
+
+    #weather-info {
+        font-size: 16px;
+    }
+
+    #weather-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hourly-item {
+        width: 60px;
+    }
+
+    .hourly-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hourly-item span {
+        font-size: 10px;
+    }
 }
