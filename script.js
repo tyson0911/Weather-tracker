@@ -1,5 +1,5 @@
 const apiKey = 'f98c6d20c863b1338c0d4c91c231a9be'; // Replace with your OpenWeatherMap API key
-let isCelsius = true; // Track the current unit and it is celsius by default
+let isCelsius = true; 
 
 // Function to fetch weather by city name
 function getWeather() {

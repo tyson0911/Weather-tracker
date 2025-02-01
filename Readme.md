@@ -2,6 +2,10 @@ Weather Tracker App 🌦️
 
         A modern and responsive weather application that provides real-time weather data for any city or the user's current location. Built with HTML, CSS, JavaScript, and the OpenWeatherMap API.
 
+Understanding Build : 
+        
+        Each function is mentioned what it does for a better understanding of how the project was built . People cloning these repo will know how the functionailities are working on each function being executed .
+
 Running the Project Locally 🛠️
 
 Prerequisites
@@ -115,3 +119,6 @@ Technologies Used 🛠️
         Axios for HTTP requests.
 
         Geolocation API for detecting user location.
+
+
+Help Taken From codeium to write the readme.md file 
