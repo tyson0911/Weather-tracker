@@ -1,4 +1,4 @@
-const apiKey = 'f98c6d20c863b1338c0d4c91c231a9be'; // Replace with your OpenWeatherMap API key
+const apiKey = ''; // Replace with your OpenWeatherMap API key
 let isCelsius = true; 
 
 // Function to fetch weather by city name
